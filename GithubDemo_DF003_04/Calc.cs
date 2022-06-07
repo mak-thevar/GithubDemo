@@ -15,11 +15,11 @@ namespace GithubDemo_DF003_04
         int Subtract(int x, int y);
     }
 
-    public class Calc : ICalc
+    public class Calc : ICalcb
     {
         public int Add(int x, int y)
         {
-            return x * y;
+            return x + y;
         }
 
         public int Divide(int x, int y)
