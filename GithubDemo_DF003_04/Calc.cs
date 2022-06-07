@@ -15,7 +15,7 @@ namespace GithubDemo_DF003_04
         int Subtract(int x, int y);
     }
 
-    public class Calc : ICalcb
+    public class Calc : ICalc
     {
         public int Add(int x, int y)
         {
