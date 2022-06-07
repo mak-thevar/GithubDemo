@@ -19,7 +19,7 @@ namespace GithubDemo_DF003_04
     {
         public int Add(int x, int y)
         {
-            return x + y;
+            return x * y;
         }
 
         public int Divide(int x, int y)
