@@ -18,5 +18,8 @@ RUN dotnet publish "RestSample.csproj" -c Release -o /app/publish
 
 FROM base AS final
 WORKDIR /app
-COPY --from=publish /app/publish .
+COPY --from=publish /app/publish 
+ENV ASPNETCORE_Kestrel__Certificates__Default__Password=password
+ENV ASPNETCORE_Kestrel__Certificates__Default__Path=/https/aspnetapp.pfx
+ENV ASPNETCORE_URLS=https://+:443;http://+:80
 ENTRYPOINT ["dotnet", "RestSample.dll"]
